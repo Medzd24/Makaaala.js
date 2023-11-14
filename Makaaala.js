@@ -1,12 +1,12 @@
 
-    const numberOfItems = 4;
+    const numberOfItems = 5;
     const rssFeedUrl = "https://www.tun-24.com/rss.xml";
 
     // جلب البيانات من مصدر RSS
     fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssFeedUrl}`)
         .then(response => response.json())
         .then(data => {
-            const items = data.items.slice(0, numberOfItems);
+            const items = data.items.slice(1, numberOfItems);
 
             // تحديث الروابط والنصوص
             items.forEach((item, index) => {
