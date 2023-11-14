@@ -1,5 +1,5 @@
 
-    const numberOfItems = 5;
+    const numberOfItems = 4;
     const rssFeedUrl = "https://www.tun-24.com/rss.xml";
 
     // جلب البيانات من مصدر RSS
@@ -10,7 +10,7 @@
 
             // تحديث الروابط والنصوص
             items.forEach((item, index) => {
-                const headlineElement = document.getElementById(`headline${index + 1}`);
+                const headlineElement = document.getElementById(`headline${index + 0}`);
                 headlineElement.textContent = item.title;
                 headlineElement.href = item.link;
             });
